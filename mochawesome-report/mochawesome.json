@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-23T17:41:33.873Z",
+    "end": "2022-01-23T17:42:15.616Z",
+    "duration": 41743,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d8c3c80-6719-4c35-ab80-4efb5dc830d5",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff5ece17-1562-4718-893d-47ec58eaab6b",
+          "title": "test adding another item to todo list",
+          "fullFile": "C:\\Users\\jkala\\OneDrive\\Рабочий стол\\selenium example\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return add another item name",
+              "fullTitle": "test adding another item to todo list should return add another item name",
+              "timedOut": null,
+              "duration": 40136,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Set driver for firefox\nlet driver = await new Builder()\n.forBrowser('firefox')\n.build()\n\n//keep the window open\nawait driver\n.getWindowHandle()\n\n//open the website \nawait driver\n.get('https://lambdatest.github.io/sample-todo-app')\n\n//find the element and type 'Learn Selenium', then press ENTER\nawait driver\n.findElement(By.id('sampletodotext'))\n.sendKeys('Learn Mocha', Key.RETURN)\n//Find the last li element and get its value\nlet todoText = await driver\n.findElement(By.xpath(\"//li[last()]\"))\n.getText()\n.then(function(value){\n    return value\n})\n\n//check if the selected li value equals\ntodoText.should.equal('Learn Mocha')\n//close the browser window\nawait driver.quit()",
+              "err": {},
+              "uuid": "6f9051f3-c3ef-4189-ba72-b44d4bc40471",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6f9051f3-c3ef-4189-ba72-b44d4bc40471"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40136,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "93544587-f0c7-4a37-bac1-f57b5f4e05f9",
+          "title": "test adding item to todo list",
+          "fullFile": "C:\\Users\\jkala\\OneDrive\\Рабочий стол\\selenium example\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return add item name",
+              "fullTitle": "test adding item to todo list should return add item name",
+              "timedOut": null,
+              "duration": 40239,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Set driver for firefox\nlet driver = await new Builder()\n.forBrowser('firefox')\n.build()\n\n//keep the window open\nawait driver\n.getWindowHandle()\n\n//open the website \nawait driver\n.get('https://lambdatest.github.io/sample-todo-app')\n\n//find the element and type 'Learn Selenium', then press ENTER\nawait driver\n.findElement(By.id('sampletodotext'))\n.sendKeys('Learn Selenium', Key.RETURN)\n//Find the last li element and get its value\nlet todoText = await driver\n.findElement(By.xpath(\"//li[last()]\"))\n.getText()\n.then(function(value){\n    return value\n})\n\n//check if the selected li value equals\ntodoText.should.equal('Learn Selenium')\n//close the browser window\nawait driver.quit()",
+              "err": {},
+              "uuid": "7eb449f3-c115-4f32-b182-aa4198bc3973",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7eb449f3-c115-4f32-b182-aa4198bc3973"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40239,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}
